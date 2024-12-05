@@ -1,0 +1,121 @@
+body {
+  background-color: #17202a;
+}
+html {
+  font-size: 62.5%;
+  font-family: "urbanist";
+}
+p,
+a,
+li,
+input {
+  font-size: 1.6rem;
+  letter-spacing: 0.12rem;
+  line-height: 1.5;
+  color: #ffff;
+}
+button {
+  padding: 0.8rem 3.2rem;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  border: 0;
+  background-color: green;
+  margin-right: 9px;
+  box-shadow: rgb(0 0 0 / 50%) 0 0 8px;
+  text-transform: uppercase;
+  border-radius: 10px;
+  font-weight: 600;
+}
+#delete {
+  padding: 0.8rem 3.2rem;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  border: 0;
+  background-color: red;
+  margin-right: 9px;
+  box-shadow: rgb(0 0 0 / 50%) 0 0 8px;
+  text-transform: uppercase;
+  border-radius: 10px;
+}
+
+button:hover {
+  background-color: rgb(73, 189, 73);
+  color: #fff;
+}
+#delete:hover {
+  background-color: rgb(183, 74, 74);
+  color: #fff;
+}
+.main-section {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.section-form {
+  padding: 1.6rem;
+  background-color: #212f3d;
+  border-radius: 0.6rem;
+  -webkit-border-radius: 0.6rem;
+  -moz-border-radius: 0.6rem;
+  -ms-border-radius: 0.6rem;
+  -o-border-radius: 0.6rem;
+  margin: 3.2rem auto;
+
+  form {
+    display: flex;
+    gap: 0.8rem;
+  }
+  & input {
+    width: 24rem;
+    color: #212f3d;
+    border: 0.1rem solid grey;
+    outline: none;
+    border-radius: 0.3rem;
+    -webkit-border-radius: 0.3rem;
+    -moz-border-radius: 0.3rem;
+    -ms-border-radius: 0.3rem;
+    -o-border-radius: 0.3rem;
+    padding: 0.8rem 1.2rem;
+  }
+}
+
+.section-post {
+  width: 90%;
+  & ol {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3.2rem;
+
+    & li {
+      background-color: #212f3c;
+      padding: 1.6rem;
+      border-radius: 0.3rem;
+      -webkit-border-radius: 0.3rem;
+      -moz-border-radius: 0.3rem;
+      -ms-border-radius: 0.3rem;
+      -o-border-radius: 0.3rem;
+      list-style-position: inside;
+      border-left: 0.2rem solid #fff;
+    }
+  }
+}
+
+@media screen and (max-width: 980px) {
+  .section-form form {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .section-post ol {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .section-post ol {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
